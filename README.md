@@ -22,4 +22,4 @@ Em resumo, Where in the World é um site simples e eficaz para aqueles que desej
 - Passo 2 ```npm install```
 
 ## Como acessar
-<a href="https://where-in-the-world-ashy-tau.vercel.app/">Clique aqui</a>
+<a href="https://wiliammelo-where-in-the-world.vercel.app/">Clique aqui</a>
