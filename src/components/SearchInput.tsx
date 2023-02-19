@@ -1,19 +1,19 @@
-import React, { useEffect, useState, useContext } from "react";
-import { AiOutlineSearch } from "react-icons/ai";
-import { Countrys } from "../@types/Country.type";
-import { CountryContextInterface } from "../@types/CountryContext.type";
-import { countryContext } from "../context/countrys";
+import React, { useEffect, useState, useContext } from 'react';
+import { AiOutlineSearch } from 'react-icons/ai';
+import { Countrys } from '../@types/Country.type';
+import { CountryContextInterface } from '../@types/CountryContext.type';
+import { countryContext } from '../context/countrys';
 
-import { data } from "../../data";
+import { data } from '../../data';
 
 export default function SearchInput() {
-  const [country, setCoutry] = useState("");
-  const [alert, setAlert] = useState("");
+  const [country, setCoutry] = useState('');
+  const [alert, setAlert] = useState('');
 
   const { setData } = useContext(countryContext) as CountryContextInterface;
 
   async function handleSearch() {
-    setCoutry("");
+    setCoutry('');
     const Countrys = data;
     const countrySearched = Countrys.filter(
       (item) =>
@@ -32,9 +32,9 @@ export default function SearchInput() {
     );
     if (countrySearched.length > 0) {
       setData(countrySearched);
-      setAlert("");
+      setAlert('');
     } else {
-      setAlert("Country not found!");
+      setAlert('Country not found!');
       setData(Countrys);
     }
   }

@@ -1,16 +1,16 @@
-import React, { useEffect, useState } from "react";
-import Header from "../components/Header";
-import { CgArrowLongLeft } from "react-icons/cg";
-import { useLocation, useNavigate } from "react-router-dom";
-import { Country, Countrys } from "../@types/Country.type";
-import CardDetail from "../components/CardDetail";
+import React, { useEffect, useState } from 'react';
+import Header from '../components/Header';
+import { CgArrowLongLeft } from 'react-icons/cg';
+import { useLocation, useNavigate } from 'react-router-dom';
+import { Country, Countrys } from '../@types/Country.type';
+import CardDetail from '../components/CardDetail';
 
-import { data as CountrysData } from "../../data";
+import { data as CountrysData } from '../../data';
 
 export default function Details() {
   const location = useLocation();
   const navigate = useNavigate();
-  const country = new URLSearchParams(location.search).get("country");
+  const country = new URLSearchParams(location.search).get('country');
   const [data, setData] = useState<Country>();
 
   useEffect(() => {
@@ -22,7 +22,7 @@ export default function Details() {
   console.log(data);
 
   function handleBack() {
-    navigate("/");
+    navigate('/');
   }
   const currencies: string[] = [];
   if (data && data.currencies) {
@@ -79,9 +79,9 @@ export default function Details() {
                   <CardDetail
                     Information="Population"
                     value={data.population
-                      .toLocaleString("pt-BR")
+                      .toLocaleString('pt-BR')
                       .toString()
-                      .replace(/[.]/g, ",")}
+                      .replace(/[.]/g, ',')}
                   />
                   <CardDetail Information="Region" value={data.region} />
                   <CardDetail Information="Sub Region" value={data.subregion} />

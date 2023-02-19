@@ -1,7 +1,7 @@
-import { createContext, ReactNode, useEffect, useState } from "react";
-import { Countrys } from "../@types/Country.type";
-import { CountryContextInterface } from "../@types/CountryContext.type";
-import { data as countryData } from "../../data";
+import { createContext, ReactNode, useEffect, useState } from 'react';
+import { Countrys } from '../@types/Country.type';
+import { CountryContextInterface } from '../@types/CountryContext.type';
+import { data as countryData } from '../../data';
 
 export const countryContext = createContext<CountryContextInterface | null>(
   null

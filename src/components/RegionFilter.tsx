@@ -1,10 +1,10 @@
-import React, { useState, useContext } from "react";
+import React, { useState, useContext } from 'react';
 
-import { IoIosArrowDown } from "react-icons/io";
-import { Countrys } from "../@types/Country.type";
-import { CountryContextInterface } from "../@types/CountryContext.type";
-import { countryContext } from "../context/countrys";
-import { data } from "../../data";
+import { IoIosArrowDown } from 'react-icons/io';
+import { Countrys } from '../@types/Country.type';
+import { CountryContextInterface } from '../@types/CountryContext.type';
+import { countryContext } from '../context/countrys';
+import { data } from '../../data';
 
 export default function RegionFilter() {
   const [showContinents, setShowContinents] = useState(false);
@@ -12,7 +12,7 @@ export default function RegionFilter() {
   async function handleFilter(continent: string) {
     console.log(data);
     const countrys: Countrys = data;
-    continent === "All"
+    continent === 'All'
       ? setData(countrys)
       : setData(countrys.filter((country) => country.region === continent));
     setShowContinents(false);
@@ -30,7 +30,7 @@ export default function RegionFilter() {
       </div>
       {showContinents && (
         <div className="w-full bg-white-50 shadow-box dark:shadow-box-dark dark:bg-dark-mode-element-100 rounded px-6 absolute -bottom-52">
-          {["Africa", "Americas", "Asia", "Europe", "Oceania", "All"].map(
+          {['Africa', 'Americas', 'Asia', 'Europe', 'Oceania', 'All'].map(
             (continent, index) => {
               return (
                 <p

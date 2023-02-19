@@ -1,10 +1,10 @@
-import React, { useState, useEffect, useContext } from "react";
-import { CountryContextInterface } from "../@types/CountryContext.type";
-import Card from "../components/Card";
-import Header from "../components/Header";
-import RegionFilter from "../components/RegionFilter";
-import SearchInput from "../components/SearchInput";
-import { countryContext } from "../context/countrys";
+import React, { useState, useEffect, useContext } from 'react';
+import { CountryContextInterface } from '../@types/CountryContext.type';
+import Card from '../components/Card';
+import Header from '../components/Header';
+import RegionFilter from '../components/RegionFilter';
+import SearchInput from '../components/SearchInput';
+import { countryContext } from '../context/countrys';
 
 export default function Home() {
   const { data } = useContext(countryContext) as CountryContextInterface;

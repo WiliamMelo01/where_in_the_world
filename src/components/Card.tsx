@@ -1,6 +1,6 @@
-import React from "react";
-import CardDetail from "./CardDetail";
-import { useNavigate } from "react-router-dom";
+import React from 'react';
+import CardDetail from './CardDetail';
+import { useNavigate } from 'react-router-dom';
 
 type CardProps = {
   country: string;
@@ -37,9 +37,9 @@ export default function Card({
         <p className="font-extrabold text-xl pt-4">{country}</p>
         <CardDetail
           Information="Population"
-          value={Population.toLocaleString("pt-BR")
+          value={Population.toLocaleString('pt-BR')
             .toString()
-            .replace(/[.]/g, ",")}
+            .replace(/[.]/g, ',')}
         />
         <CardDetail Information="Region" value={Region} />
         <CardDetail Information="Capital" value={Capital} />
