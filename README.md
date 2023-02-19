@@ -21,3 +21,5 @@ Em resumo, Where in the World é um site simples e eficaz para aqueles que desej
 - Passo 1 ```git clone https://github.com/WiliamMelo01/where_in_the_world.git```
 - Passo 2 ```npm install```
 
+## Como acessar
+<a href="https://where-in-the-world-ashy-tau.vercel.app/">Clique aqui</a>
